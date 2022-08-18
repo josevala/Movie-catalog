@@ -1,0 +1,27 @@
+/* Write your CSS Here. */
+body{
+    background-color: #640101;
+    color: antiquewhite;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+    background-color: black;
+    padding: 10px;
+    color: antiquewhite;
+  }
+    
+ .movie{
+    background-color: #640101;
+    height: auto;
+    width: auto;
+ }
+    
+img{
+    background-color: #640101;
+    padding: 10px;
+    height: 400px;
+    width: 300px;
+}
