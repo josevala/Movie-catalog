@@ -34,7 +34,7 @@ const rendering = function(movieArr){
  const searchByTitle = document.getElementById("titlesearch")
  searchByTitle.addEventListener("keyup", (e) => {
  let titlesearch = e.target.value
- let filterTitles = movieArr.filter(eachmovie => eachmovie.title.toLowerCase().includes(titlesearch.toLowerCase()))
+ let filterTitles = movieArr.filter(eachmovie => eachmovie.title.toLowerCase().startsWith(titlesearch.toLowerCase()))
  console.log(titlesearch)
  rendering(filterTitles)
  })
