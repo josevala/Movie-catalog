@@ -32,10 +32,7 @@ const rendering = function(movieArr){
 
  }
  rendering(movieArr)
- eachmovie.addEventListener("onclick",()=>{
-        
-
- })
+ 
 
  const searchByTitle = document.getElementById("titlesearch")
  searchByTitle.addEventListener("keyup", (e) => {
