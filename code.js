@@ -9,27 +9,33 @@ const movieArr = movieDetails.map(eachmovie => {
 })
 console.log("movie Detail:", movieArr)
 
-
+let eachmovie= document.createElement(`div`)
 let containerElement = document.querySelector("#container")
 const rendering = function(movieArr){
      containerElement.innerHTML = " ";
        for( let i = 0; i< movieArr.length; i += 1 ){
         let eachmovie= document.createElement(`div`)
         eachmovie.classList.add("movie")
-        eachmovie.innerHTML  = `<img src = ${movieArr[i].imageUrl}>
-<h3> ${movieArr[i].title} </h3>
-<p><strong> Release Date:</strong> ${movieArr[i].release_date} </p>
-<p><strong> starring:</strong> ${movieArr[i].cast}</p>
-<p><strong> overview: </strong> ${movieArr[i].overview}</p>
-         <br></br>`
+        eachmovie.style.backgroundImage = `url(${movieArr[i].imageUrl})`
+        eachmovie.innerHTML  =
+         `<div id = "text">
+         <div ><h2> ${movieArr[i].title} </h2></div>     
+                <div id = "text">
+                        <p><strong> Release Date:</strong> ${movieArr[i].release_date} </p>
+                        <p><strong> starring:</strong> ${movieArr[i].cast}</p>
+                        <p><strong> overview: </strong> ${movieArr[i].overview}</p>
+            </div>`
          containerElement.append(eachmovie)
-
-
+         
          }
+         
 
  }
  rendering(movieArr)
+ eachmovie.addEventListener("onclick",()=>{
+        
 
+ })
 
  const searchByTitle = document.getElementById("titlesearch")
  searchByTitle.addEventListener("keyup", (e) => {
@@ -38,3 +44,4 @@ const rendering = function(movieArr){
  console.log(titlesearch)
  rendering(filterTitles)
  })
+
