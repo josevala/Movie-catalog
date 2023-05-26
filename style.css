@@ -46,7 +46,7 @@ body{
    justify-content: center; 
     background-color: black;
     color: antiquewhite;
-    border-top:transparent 30px;
+    
   }
   .movie{
     margin-top: 10px;
@@ -57,7 +57,6 @@ body{
     justify-content: center;
     max-width:450px;
     height: 400px;
-    
     background-size: 100% 100%;
     border-radius: 10px;
     
@@ -65,11 +64,13 @@ body{
   p{
      margin-left: 10px;
      margin-right: 10px;
+     margin-bottom: 50px;
   }
   
    .movie{
      color: transparent;
      overflow-y: scroll;
+     scrollbar-color: darkgray gray;
      scroll-behavior:smooth;
    }
   .movie:hover{
