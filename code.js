@@ -7,32 +7,68 @@ const movieArr = movieDetails.map(eachmovie => {
         parseInt(eachmovie.release_date)) 
         return {...structuredClone(eachmovie), ...structuredClone(matchMovie)}
 })
-console.log("movie Detail:", movieArr)
 
+let mybutton = document.getElementById("myBtn");
+let slideShow = document.querySelector("#slideShow");
 let eachmovie= document.createElement(`div`)
 let containerElement = document.querySelector("#container")
+let n = []
+
+mybutton.addEventListener('click',function(){
+        containerElement.scrollTop = 0;
+})
+containerElement.onscroll = function(){btnScroll()}
+mybutton.style.display= 'none'
+
+function btnScroll(){
+if (containerElement.scrollTop > 60 ){
+        mybutton.style.display = 'block'
+}
+else{
+        mybutton.style.display = 'none'
+}
+}
+
+
+      
+let intro = function (slideShow){
+        for(i = 0; i <= 4; i++){
+            n.push(Math.floor(Math.random() * 600))
+            let slide = document.createElement("div")
+            slide.classList.add(`slides-${[i]}`)
+            slide.style.backgroundImage = `url(${movieArr[n[i]].imageUrl})`
+            slideShow.append(slide)  
+}        
+           console.log(n);
+}
+intro(slideShow)
+
+
+
 const rendering = function(movieArr){
      containerElement.innerHTML = " ";
+
        for( let i = 0; i< movieArr.length; i += 1 ){
         let eachmovie= document.createElement(`div`)
         eachmovie.classList.add("movie")
         eachmovie.style.backgroundImage = `url(${movieArr[i].imageUrl})`
         eachmovie.innerHTML  =
-         `<div id = "text">
-         <div ><h2> ${movieArr[i].title} </h2></div>     
+        `<div id = "text">
+                <div ><h2> ${movieArr[i].title} </h2></div>     
                 <div id = "text">
                         <p><strong> Release Date:</strong> ${movieArr[i].release_date} </p>
                         <p><strong> starring:</strong> ${movieArr[i].cast}</p>
                         <p><strong> overview: </strong> ${movieArr[i].overview}</p>
-            </div>`
+                 </div>`
          containerElement.append(eachmovie)
-         
-         }
-         
-
+         }      
+ 
+      
+   
  }
  rendering(movieArr)
  
+
 
  const searchByTitle = document.getElementById("titlesearch")
  searchByTitle.addEventListener("keyup", (e) => {
