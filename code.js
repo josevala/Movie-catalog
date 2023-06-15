@@ -32,21 +32,31 @@ else{
 
       
 let intro = function (slideShow){
+        let slide;
+        let img
+
         for(i = 0; i <= 4; i++){
             n.push(Math.floor(Math.random() * 600))
-            let slide = document.createElement("div")
+             slide = document.createElement("div")
             slide.classList.add(`slides-${[i]}`)
-            let img = document.createElement('img')
+            img = document.createElement('img')
             img.src=`${movieArr[n[i]].imageUrl}`
             slide.append(img)
             slideShow.append(slide)  
-}        
+           
+}   
+          let slide1 = document.querySelector("slides-0");
+          let slide2 = document.querySelector("slides-1");
+          let slide3 = document.querySelector("slides-2");
+          let slide4 = document.querySelector("slides-3");
+          let slide5 = document.querySelector("slides-4");
+
+          setInterval(function(){
+            
+          }, 5000)
            console.log(n);
 
-           setInterval(function(){
            
-           
-           }, 5000)
            
         }
 

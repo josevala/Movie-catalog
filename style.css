@@ -64,7 +64,7 @@ img{
   left: 15%;
   width: 15%;
   height: 30%;
-
+  
   opacity: .35;
   transform: translateX(-50%);
   z-index: 0;
@@ -84,9 +84,9 @@ z-index: 1;
   transform: translateX(-50%);
 }
 .slides-2{
-  box-shadow: -2px 5px 33px 6px rgba(0,0,0,0,.35);
+  
   width:  19%;
-  height: 38%;
+  height: 39%;
   left: 50%; 
   transform:translateX(-50%);
   z-index: 2;
@@ -205,21 +205,9 @@ button:hover{
   } 
   
  @media only screen and (max-width:700px) {
-      #slideshow{
-        height: 200px;
-      }
-  .slides-0, .slides-4{
-       width: 60px;
-       height: 160px;
-
-  }
-  .slides-1, .slides-3{
-     width: 70px;
-     height: 180px;
-  }
-  .slides-2{
-         width: 200px;
-         min-height: 190px;
+    
+  input{
+    margin-top: 70px;
   }
 
    #container{
@@ -243,19 +231,66 @@ button:hover{
  }
  button{
   right: 10px;
-  top: 60%;
+  top: 75%;
   background-color: transparent;
  }
  #slideShow{
   height: 270px;
 
  }
- #slideShow div{
-  width: 100px;
-  height: 250px;
-  background-size: 100% 100%;
+ .slides-0{
+  width:  20%;
+  height: 30%;
+
+ }
+ .slides-1{
+  width: 25%;
+
+  left:31.5%;
+  transform: translateX(-50%);
+}
+.slides-2{
+  
+  width:  35%;
+  height: 37.5%;
+  left: 50%; 
+  transform:translateX(-50%);
+  z-index: 2;
+
+}
+
+.slides-3{
+  width: 25%;
+  left: 68.5%;
+  transform: translate(-50%);
+}
+.slides-4{
+  width:  20%;
+  height: 30%;
+
+  left:85%;
+  opacity: .4;
+  transform: translate(-50%);
+  z-index: 0;
+
 }
  
+}
+@media only screen and (max-height:400px) {
+
+.slides-2{
+  height: 70%;
+}
+.slides-0,.slides-4{
+  height:60%;
+}
+.slides-1,.slides-3{
+  height: 65%;
+}
+.movie{
+  height: 310px;
+}
+
 }
 
 
@@ -264,5 +299,6 @@ button:hover{
     height: 1000px;
     
   }
+  
   
   }
