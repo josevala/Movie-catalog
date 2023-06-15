@@ -38,65 +38,79 @@ scroll-behavior: smooth;
   margin-right: 5%;
   display: flex;
   flex-direction: row;
-  max-width:80%;
+  max-width:90%;
   height: 375px;
   justify-content: center;
   align-content: center;
   align-items: center;
 
+
 }
 #slideShow div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  width:  20%;
-  height: 44%;
-  background-size: 100% 100%;
   border-radius: 15px;
   transition: all 0.3s ease-in-out;
+}
+img{
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
 }
 
 .slides-0{
   left: 15%;
+  width: 15%;
+  height: 30%;
+
   opacity: .35;
   transform: translateX(-50%);
   z-index: 0;
-  border: rgb(73, 72, 72) 0.5px solid;
 
 }
 
 .slides-1, .slides-3{
 opacity: 0.7;
+width:  17%;
+height: 34%;
+
 z-index: 1;
-border: rgb(73, 72, 72) 0.5px solid;
 
 }
 .slides-1{
-  left:33%;
+  left:31.5%;
   transform: translateX(-50%);
 }
 .slides-2{
   box-shadow: -2px 5px 33px 6px rgba(0,0,0,0,.35);
-  max-width: 25%;
+  width:  19%;
+  height: 38%;
   left: 50%; 
-  transform:translateX(-40%);
+  transform:translateX(-50%);
   z-index: 2;
-  border: white 1px solid;
 
 }
 
 .slides-3{
-  left: 70%;
+  left: 68.5%;
   transform: translate(-50%);
 }
 .slides-4{
+  width:  15%;
+  height: 30%;
+
   left:85%;
   opacity: .4;
   transform: translate(-50%);
   z-index: 0;
+
 }
 
 
 input{
-    margin: 20px;
+    margin-top: 40px;
     max-width: 200px;
     height: 40px;
     align-self: center;
@@ -191,8 +205,24 @@ button:hover{
   } 
   
  @media only screen and (max-width:700px) {
+      #slideshow{
+        height: 200px;
+      }
+  .slides-0, .slides-4{
+       width: 60px;
+       height: 160px;
+
+  }
+  .slides-1, .slides-3{
+     width: 70px;
+     height: 180px;
+  }
+  .slides-2{
+         width: 200px;
+         min-height: 190px;
+  }
+
    #container{
-    
     width:100%;
     grid-template-columns: repeat(2,40%);
     column-gap: 15px;;
@@ -212,7 +242,8 @@ button:hover{
     margin-bottom: 30px;
  }
  button{
-  right: 20px;
+  right: 10px;
+  top: 60%;
   background-color: transparent;
  }
  #slideShow{

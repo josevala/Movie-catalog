@@ -36,11 +36,20 @@ let intro = function (slideShow){
             n.push(Math.floor(Math.random() * 600))
             let slide = document.createElement("div")
             slide.classList.add(`slides-${[i]}`)
-            slide.style.backgroundImage = `url(${movieArr[n[i]].imageUrl})`
+            let img = document.createElement('img')
+            img.src=`${movieArr[n[i]].imageUrl}`
+            slide.append(img)
             slideShow.append(slide)  
 }        
            console.log(n);
-}
+
+           setInterval(function(){
+           
+           
+           }, 5000)
+           
+        }
+
 intro(slideShow)
 
 
@@ -62,8 +71,7 @@ const rendering = function(movieArr){
                  </div>`
          containerElement.append(eachmovie)
          }      
- 
-      
+       
    
  }
  rendering(movieArr)
